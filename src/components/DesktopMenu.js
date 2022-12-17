@@ -42,7 +42,7 @@ export default function DesktopMenu(){
                             </DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem>
-                               <NavLink href="/encargos" className="navlink">Encargar ropa</NavLink> 
+                               <NavLink href="/encargos" className="navlink">Encargar productos</NavLink> 
                             </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown> 

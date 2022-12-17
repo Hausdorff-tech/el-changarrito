@@ -42,7 +42,7 @@ export default function MobileMenu(){
                                 </DropdownItem>
                                 <DropdownItem divider />
                                 <DropdownItem>
-                                <NavLink href="/encargos" className="Navlink">Encargar ropa</NavLink> 
+                                <NavLink href="/encargos" className="Navlink">Encargar productos</NavLink> 
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
@@ -50,7 +50,7 @@ export default function MobileMenu(){
                             <NavLink href="/contacto" className="Mainlink">Contacto</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/ingresar" className="Mainlink">Login</NavLink>
+                            <NavLink href="/ingresar" className="Mainlink">Ingresar</NavLink>
                         </NavItem> 
                         <NavbarText id="slogan">Siempre con tu ropa favorita</NavbarText>  
                     </Nav>                    
