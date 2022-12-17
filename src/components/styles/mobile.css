@@ -1,0 +1,40 @@
+#logo{
+    width:33%;
+    height:33%;
+}
+#toggler{
+    margin-left:85%;
+    margin-top:-10%;
+}
+
+.Mainlink{
+    color:white;
+    font-family: LemonJelly;
+    font-size:150%;
+}
+.Mainlink:hover{
+    color:rgb(189, 53, 53);
+}
+.Navlink{
+    color:black;
+    font-family: LemonJelly;
+    font-size:150%;
+}
+.Navlink:hover{
+    color:rgb(189, 53, 53);
+}
+#slogan{
+    font-style:italic;
+    font-family: CandyCake;
+    font-size:115%;
+    color:rgb(189, 53, 53);
+}
+
+@font-face{
+    font-family:LemonJelly;
+    src:url("../../fonts/LemonJellyPersonalUse-dEqR.ttf"); 
+}
+@font-face{
+    font-family:CandyCake;
+    src:url("../../fonts/CandyCake-gxEyP.ttf");
+}

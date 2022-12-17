@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Product from "./components/Product";
+import Details from "./components/Details";
+import Contact from "./components/Contact";
+import Encargos from "./components/Encargos";
+//// Conditional rendering
+import Login from "./login/Login";
+import Dashboard from "./login/Dashboard";
+import Cart from "./login/Cart";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>        
+        <Route path="/" element={<Home />}/>
+          <Route path="producto" index element={<Product />}/>          
+          <Route path="producto/detalles" element={<Details />}/>
+          <Route path="contacto" element={<Contact />}/>  
+          <Route path="encargos" element={<Encargos />} />      
+          <Route path="ingresar" element={<Login />} />
+          <Route path=":user" element={<Dashboard />}/>
+          <Route path=":user/carrito" element={<Cart />}/>     
+      </Routes>
+    </BrowserRouter>
   );
 }
 
