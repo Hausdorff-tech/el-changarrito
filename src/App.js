@@ -9,6 +9,7 @@ import Encargos from "./components/Encargos";
 import Login from "./login/Login";
 import Dashboard from "./login/Dashboard";
 import Cart from "./login/Cart";
+import NewAccount from "./login/NewAccount";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="contacto" element={<Contact />}/>  
           <Route path="encargos" element={<Encargos />} />      
           <Route path="ingresar" element={<Login />} />
+          <Route path="cuenta" element={<NewAccount />} />
           <Route path=":user" element={<Dashboard />}/>
           <Route path=":user/carrito" element={<Cart />}/>     
       </Routes>

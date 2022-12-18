@@ -13,16 +13,16 @@ export default function Contact(){
         <Form id="contactForm" className="mt-3 d-flex justify-content-center">                        
             <FormGroup>
                 <div className="m-3">
-                    <TextField variant="outlined" label="Nombre" type="text" className="Input" /> 
+                    <TextField variant="outlined" color="success" label="Nombre" type="text" className="Input" /> 
                 </div>                
                 <div className="m-3">
-                    <TextField variant="outlined" label="Apellidos" type="email" className="Input" />
+                    <TextField variant="outlined" color="success" label="Apellidos" type="email" className="Input" />
                 </div>
                 <div className="m-3">
-                    <TextField variant="outlined" label="Correo electrónico" type="text" className="Input" />
+                    <TextField variant="outlined" color="success" label="Correo electrónico" type="text" className="Input" />
                 </div> 
                 <div className="m-3">
-                    <TextField id="outlined-textarea" label="Mensaje" type="text" multiline rows={5} className="Input" />
+                    <TextField id="outlined-textarea" color="success" label="Mensaje" type="text" multiline rows={5} className="Input" />
                 </div>  
                 <div className="m-3">
                     <Button outline color="danger" className="send">

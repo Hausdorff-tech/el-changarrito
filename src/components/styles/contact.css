@@ -3,12 +3,18 @@
     font-family:Roboto;
 }
 #contactContainer{
-    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+   /*background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);*/
+   background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
 }
 #contactForm:hover{
     border-width: 5px;
 
 }
+h1{
+    color:auto;
+    font-family: Roboto;
+}
+
 @font-face{
     font-family:Roboto;
     src:url("../../fonts/RobotoRegular.ttf");
