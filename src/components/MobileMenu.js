@@ -14,7 +14,7 @@ import {
     DropdownItem,
     NavbarText,
   } from 'reactstrap';
-  import "../components/styles/mobile.css";
+  import "./styles/mobile.css";
 
 export default function MobileMenu(){
     const[isOpen, setIsOpen] = useState(false);

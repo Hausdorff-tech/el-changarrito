@@ -19,7 +19,7 @@ export default function DesktopLogin(){
                         <div className="m-3">
                             <TextField variant="outlined" color="secondary" label="Contraseña" type="password" className="Input" />
                         </div>  
-                        <div className="m-3">
+                        <div className="m-3 d-flex justify-content-center">
                             <Button outline color="warning">
                                 Acceder
                             </Button>                            
