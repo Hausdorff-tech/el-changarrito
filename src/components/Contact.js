@@ -28,7 +28,7 @@ export default function Contact(){
     
     
     const submitHandler = e => {
-        //e.preventDefault();        
+        e.preventDefault();        
         SendMail({nombre, apellidos, correo, mensaje, setSend});
         console.log(send);
     }

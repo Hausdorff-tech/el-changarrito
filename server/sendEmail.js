@@ -17,7 +17,7 @@ const Email = (options) => {
     });
 }
 
-//  SEND EMAIL
+//  SEND  EMAIL FROM BUSINESS
 const EmailSender = ({ nombre, apellidos, correo, mensaje }) => {
     const options = {
         from: `El changarrito shop 🛍️`,
@@ -44,6 +44,7 @@ const EmailSender = ({ nombre, apellidos, correo, mensaje }) => {
     Email(options);
 }
 
+//RECEIVE EMAIL FROM USERS
 const EmailReceiver = ({nombre, apellidos, correo, mensaje}) => {
     let options = {
         from:"¡Un nuevo usuario!",
