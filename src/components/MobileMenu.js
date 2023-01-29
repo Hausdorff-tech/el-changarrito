@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import logo from "../images/elchangarrito.png";
 import {
     Collapse,
@@ -13,12 +13,28 @@ import {
     DropdownMenu,
     DropdownItem,
     NavbarText,
+    Button, 
+    Modal,
+    ModalHeader,
+    ModalBody
   } from 'reactstrap';
   import "./styles/mobile.css";
+  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+  import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+  import { CartContext } from "../CartContext";
+  import Producto from "./Producto";
 
 export default function MobileMenu(){
+    const cart = useContext(CartContext);
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    
     const[isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
+
+    const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
     return(
         <>  
@@ -35,10 +51,10 @@ export default function MobileMenu(){
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                    <NavLink href="/producto" className="Navlink">Ropa para mujer</NavLink>
+                                    <NavLink href="/ropa-mujeres" className="Navlink">Ropa para mujer</NavLink>
                                 </DropdownItem>
                                 <DropdownItem>
-                                    <NavLink href="/producto" className="Navlink">Ropa para hombre</NavLink>
+                                    <NavLink href="/ropa-hombres" className="Navlink">Ropa para hombre</NavLink>
                                 </DropdownItem>
                                 <DropdownItem divider />
                                 <DropdownItem>
@@ -52,10 +68,42 @@ export default function MobileMenu(){
                         <NavItem>
                             <NavLink href="/ingresar" className="Mainlink">Ingresar</NavLink>
                         </NavItem> 
+                        <NavItem>
+                            <Button color="secondary" onClick={handleShow}>
+                                <FontAwesomeIcon icon={faCartShopping}/>
+                            </Button>
+                        </NavItem>
                         <NavbarText id="slogan">Siempre con tu ropa favorita</NavbarText>  
                     </Nav>                    
                 </Collapse>
             </Navbar>
+
+            <Modal isOpen={show} toggle={handleClose}>
+                {productsCount > 0 
+                    ? <>
+                        <ModalHeader toggle={handleClose}>
+                            Carrito de compras: {productsCount} elementos
+                        </ModalHeader>
+                        <ModalBody>
+                            <p>Artículos en tu carrito: </p>
+                            {cart.items.map((currentProduct, idx) => (
+                                <Producto index ={idx} id={currentProduct.id} quantity={currentProduct.quantity} />
+                            ))}
+                            <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
+                            <Button color="success">Comprar</Button>
+                        </ModalBody>
+                    </>
+                    :
+                    <>
+                        <ModalHeader toggle={handleClose}>
+                            Carrito de compras
+                        </ModalHeader>
+                        <ModalBody>
+                            No hay elementos seleccionados
+                        </ModalBody>
+                    </>
+                }
+            </Modal>
         </>
     );
 }

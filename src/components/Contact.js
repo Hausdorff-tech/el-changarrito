@@ -3,7 +3,7 @@ import { SendMail } from "../API";
 import Menu from "./Menu";
 //import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {Form, FormGroup, Button } from "reactstrap";
+import {Form, FormGroup, Button, Card } from "reactstrap";
 import "./styles/contact.css";
 
 export default function Contact(){
@@ -28,7 +28,7 @@ export default function Contact(){
     
     
     const submitHandler = e => {
-        e.preventDefault();        
+        //e.preventDefault();        
         SendMail({nombre, apellidos, correo, mensaje, setSend});
         console.log(send);
     }
@@ -36,6 +36,7 @@ export default function Contact(){
     <div id="contactContainer">  
         <Menu />                
         <h1 className="d-flex justify-content-center mt-3">¡Ponete en contacto!</h1>
+        <Card id="ContactCard">
         <Form onSubmit={submitHandler} id="contactForm" className="mt-3 d-flex justify-content-center">                        
             <FormGroup>
                 <div className="m-3">
@@ -56,7 +57,8 @@ export default function Contact(){
                     </Button>
                 </div>                                                                        
             </FormGroup>
-        </Form>                 
+        </Form>
+        </Card>                 
     </div>
     );
 }

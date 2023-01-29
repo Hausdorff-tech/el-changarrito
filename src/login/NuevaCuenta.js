@@ -3,7 +3,7 @@ import Media from "react-media";
 import MobileAcc from "./MobileAccount";
 import DesktopAcc from "./DesktopAccount";
 
-export default function NewAccount(){
+export default function NuevaCuenta(){
     return(        
        <>   
         <Media queries={{

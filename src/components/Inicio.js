@@ -3,7 +3,7 @@ import "./styles/home.css";
 import Menu from "./Menu";
 import logo from "../images/elchangarrito.png";
 
-export default function Home(){
+export default function Inicio(){
     return(
         <> 
             <Menu/>

@@ -1,7 +1,7 @@
 #DesktopAccount{
     /*background-image: linear-gradient(to top, #e14fad 0%, #f9d423 100%);*/
     background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
-    height: 100vh;
+    height: 120vh;
 }
 #CardAccount{
     width:25%;

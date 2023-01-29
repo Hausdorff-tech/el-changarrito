@@ -25,6 +25,9 @@ export default function DesktopLogin(){
                             </Button>                            
                         </div>
                         <div className="m-2 d-flex justify-content-center">
+                            <Link href="/reestablecer-contraseña" underline="none">Olvidé mi contraseña</Link>
+                        </div>
+                        <div className="m-2 d-flex justify-content-center">                            
                             <Link href="/cuenta" underline="none">Crear cuenta</Link>
                         </div>
                     </FormGroup>

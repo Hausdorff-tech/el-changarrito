@@ -1,0 +1,12 @@
+#DetailsCard{
+    width:100%;
+}
+.buttons{
+    display:inline;
+    display:flex;
+    justify-content: center;
+}
+.descripcion{
+    display:flex;
+    justify-content: center;
+}

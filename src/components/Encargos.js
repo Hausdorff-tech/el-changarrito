@@ -4,7 +4,8 @@ import { sendOrder } from "../API/index.js";
 import {
     Form,
     FormGroup,
-    Button
+    Button,
+    Card
 } from "reactstrap";
 import TextField  from "@mui/material/TextField";
 import "./styles/encargos.css";
@@ -34,7 +35,7 @@ export default function Encargos(){
     }
 
     const handleSubmit = e => {
-        e.preventDefault();
+        //e.preventDefault();
         sendOrder({nombre,apellidos,correo,celular,producto,setOrder});
         console.log(order);
     }
@@ -43,6 +44,7 @@ export default function Encargos(){
         <div id="encargosContainer">
             <Menu />
             <h1 className="d-flex justify-content-center mt-3" id="encargar">¡Encargá tus productos favoritos!</h1>
+            <Card id="Card">            
             <Form onSubmit = {handleSubmit} className="mt-4 d-flex justify-content-center align-items-center">
                 <FormGroup>
                     <div className="m-3">
@@ -65,6 +67,7 @@ export default function Encargos(){
                     </div>
                 </FormGroup>
             </Form>
+            </Card>
         </div>
     );
 }

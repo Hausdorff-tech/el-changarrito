@@ -1,6 +1,21 @@
+body{
+    height:130vh;
+}
 #encargosContainer{
+    height:130vh;
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 #encargar{
     color:white;
+    margin-left:5%;
+    /*font-size:115%;*/
+    margin-top:5%;
+    margin-bottom:-2%;
+}
+#Card{
+    margin-top:5%;
+    width:25%;
+    margin-left:40%;
+    margin-bottom:1%;
+    box-shadow: 20px 20px 10px grey;
 }

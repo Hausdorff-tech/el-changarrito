@@ -14,7 +14,7 @@ export default function Menu(){
                 {matches => (
                     <Fragment>
                         {matches.small && <MobileMenu />}
-                        {matches.medium && <DesktopMenu />}
+                        {matches.medium && <MobileMenu />}
                         {matches.large && <DesktopMenu />}
                     </Fragment>
                 )}
