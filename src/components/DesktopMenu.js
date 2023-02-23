@@ -16,6 +16,7 @@ import {
     ModalHeader,
     ModalBody    
   } from 'reactstrap';
+  import { Link } from "react-router-dom";
   import { CartContext } from "../CartContext";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
@@ -61,9 +62,6 @@ export default function DesktopMenu(){
                     <NavItem> 
                         <NavLink href="/contacto" className="mainlink">Contacto</NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink href="/ingresar" className="mainlink">Ingresar</NavLink>
-                    </NavItem> 
                     <NavItem className="mt-2 mr-1">
                         <Button color="secondary" onClick={handleShow}>
                             <FontAwesomeIcon icon={faCartShopping} />                                                       
@@ -78,10 +76,16 @@ export default function DesktopMenu(){
                     <ModalBody>
                         <p>Artículos en tu carrito:</p>
                         {cart.items.map((currentProduct, idx) => (
-                            <Producto key={idx} id={currentProduct.id} quantity={currentProduct.quantity}/>
+                            <Producto 
+                                key={idx} 
+                                id={currentProduct.id} 
+                                quantity={currentProduct.quantity}
+                            />
                         ))}
                         <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
-                        <Button color="success">Comprar</Button>
+                        <Link to="/enviar" underline="none">
+                            <Button color="success">Comprar</Button>
+                        </Link>                        
                     </ModalBody>
                   </>
                 :

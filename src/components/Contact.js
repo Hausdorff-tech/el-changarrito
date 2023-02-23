@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { SendMail } from "../API";
 import Menu from "./Menu";
-//import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {Form, FormGroup, Button, Card } from "reactstrap";
+import {Form, FormGroup, Button } from "reactstrap";
 import "./styles/contact.css";
+import Footer from "./Footer";
 
 export default function Contact(){
     const [send, setSend] = useState();
@@ -30,13 +30,12 @@ export default function Contact(){
     const submitHandler = e => {
         //e.preventDefault();        
         SendMail({nombre, apellidos, correo, mensaje, setSend});
-        console.log(send);
+        //console.log(send);
     }
     return(
     <div id="contactContainer">  
         <Menu />                
         <h1 className="d-flex justify-content-center mt-3">¡Ponete en contacto!</h1>
-        <Card id="ContactCard">
         <Form onSubmit={submitHandler} id="contactForm" className="mt-3 d-flex justify-content-center">                        
             <FormGroup>
                 <div className="m-3">
@@ -52,13 +51,13 @@ export default function Contact(){
                     <TextField onChange={handleMsj} id="outlined-textarea" color="success" label="Mensaje" type="text" multiline rows={5} className="Input" />
                 </div>  
                 <div className="m-3">
-                    <Button outline color="danger" className="send">
+                    <Button outline color="primary" className="send">
                         Enviar
                     </Button>
                 </div>                                                                        
             </FormGroup>
-        </Form>
-        </Card>                 
+        </Form>               
+        <Footer/> 
     </div>
     );
 }

@@ -1,10 +1,11 @@
+import IMAGES from "./images";
 const ProductosTienda = [
     {
         id:"1",
         producto:"Camiseta",
         descripcion:"Camiseta para hombre",
         talla:"XL",
-        img:"../images/tshirt1.jpeg",
+        img:IMAGES.tshirt1,
         precio:165
     },
     {
@@ -12,7 +13,7 @@ const ProductosTienda = [
         producto:"Camiseta",
         descripcion:"Camiseta para hombre",
         talla:"L",
-        img:"./images/tshirt2.jpg",
+        img:IMAGES.tshirt2,
         precio:172
     },
     {
@@ -20,7 +21,7 @@ const ProductosTienda = [
         producto:"Camiseta",
         descripcion:"Camiseta para hombre",
         talla:"L",
-        img:"./images/tshirt3.jpg",
+        img:IMAGES.tshirt3,
         precio:200
     },
     { 
@@ -28,7 +29,7 @@ const ProductosTienda = [
         producto:"Camiseta",
         descripcion:"Camiseta para hombre",
         talla:"S",
-        img:"./images/tshirt4.jpeg",
+        img:IMAGES.tshirt4,
         precio:185
     },
     {
@@ -36,7 +37,7 @@ const ProductosTienda = [
         producto:"Gafas de sol",
         descripcion:"Gafas de sol color rojo",
         talla:"Unisex",
-        img:"./images/tshirt4.jpeg",
+        img:IMAGES.gafas,
         precio:70
     }
 ];

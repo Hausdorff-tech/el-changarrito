@@ -15,11 +15,7 @@ body{
     border-width: 5px;
 
 }
-#ContactCard{
-    width:25%;
-    margin-left:38%;
-    box-shadow: 20px 20px 10px grey;
-}
+
 h1{
     margin-top:2%;
     margin-bottom:2%;

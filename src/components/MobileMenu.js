@@ -23,6 +23,7 @@ import {
   import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
   import { CartContext } from "../CartContext";
   import Producto from "./Producto";
+  import { Link } from "react-router-dom";
 
 export default function MobileMenu(){
     const cart = useContext(CartContext);
@@ -66,9 +67,6 @@ export default function MobileMenu(){
                             <NavLink href="/contacto" className="Mainlink">Contacto</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/ingresar" className="Mainlink">Ingresar</NavLink>
-                        </NavItem> 
-                        <NavItem>
                             <Button color="secondary" onClick={handleShow}>
                                 <FontAwesomeIcon icon={faCartShopping}/>
                             </Button>
@@ -90,7 +88,9 @@ export default function MobileMenu(){
                                 <Producto index ={idx} id={currentProduct.id} quantity={currentProduct.quantity} />
                             ))}
                             <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
-                            <Button color="success">Comprar</Button>
+                            <Link to="/enviar" underline="none">
+                                <Button color="success">Comprar</Button>
+                            </Link>                            
                         </ModalBody>
                     </>
                     :

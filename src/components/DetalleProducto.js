@@ -17,10 +17,11 @@ export default function DetalleProducto(props){
     let producto = props.producto;   
     const cart = useContext(CartContext);
     const productQuantity = cart.getProductQuantity(producto.id);
+    const img = producto.img;
 
     return(
             <Card id="DetailsCard">
-                <img src={props.img} alt="Camiseta" />
+                <img src={img} alt="Camiseta" />
                 <CardBody>
                     <CardTitle className="d-flex justify-content-center">
                         <h4>{producto.titulo}</h4>

@@ -6,6 +6,7 @@ import shirt2 from "../images/tshirt2.jpg";
 import shirt3 from "../images/tshirt3.jpg";*/
 import { Row, Col } from "reactstrap";
 import { ProductosTienda } from "../ProductosTienda";
+import Footer from "./Footer";
 
 export default function RopaMujeres(){
     return(
@@ -20,7 +21,8 @@ export default function RopaMujeres(){
                         />
                     </Col>
                 ))}                
-            </Row>                    
+            </Row> 
+            <Footer />                   
         </div>
     );
 }

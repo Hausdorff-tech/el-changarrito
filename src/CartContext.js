@@ -1,4 +1,3 @@
-import { queryAllByAltText } from "@testing-library/react";
 import React, { createContext, useState } from "react";
 import {ProductosTienda, getProductData } from "./ProductosTienda";
 

@@ -7,6 +7,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../CartContext";
 import { getProductData } from "../ProductosTienda";
 import { Button } from "reactstrap";
+import "./styles/producto.css";
 
 export default function Producto(props){
     const cart = useContext(CartContext);
@@ -15,12 +16,18 @@ export default function Producto(props){
     const productData = getProductData(id);
     return(
         <>
-            <h3>{productData.producto}</h3>
-            <p>Descripción: {productData.descripcion}</p>
-            <p>Talla: {productData.talla}</p>
-            <p>Cantidad: {quantity}</p>
-            <p>C$ {(quantity * productData.precio).toFixed(2)}</p>
-            <Button color="info" size="sm" onClick={()=> cart.deleteFromCart(id)}>
+            <img src={productData.img} alt="Producto de la tienda" className="productImg"/>
+            <h3 className="d-flex justify-content-center">{productData.producto}</h3>
+            <p className="d-flex justify-content-center">Descripción: {productData.descripcion}</p>
+            <p className="d-flex justify-content-center">Talla: {productData.talla}</p>
+            <p className="d-flex justify-content-center">Cantidad: {quantity}</p>
+            <p className="d-flex justify-content-center">C$ {(quantity * productData.precio).toFixed(2)}</p>
+            <Button 
+                color="info" 
+                size="sm" 
+                className="deleteBtn d-flex justify-content-center"
+                onClick={()=> cart.deleteFromCart(id)}
+            >
                 Eliminar artículo
             </Button>
             <hr />

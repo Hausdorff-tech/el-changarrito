@@ -20,17 +20,15 @@ export const SendMail =  async ({
     }
 
 }
-
-//COMING SOON...
-    export const sendOrder = async ({
-        nombre,
-        apellidos,
-        correo,
-        celular,
-        producto,
-        setOrder
-    }) => {
-        try{
+export const sendOrder = async ({
+    nombre,
+    apellidos,
+    correo,
+    celular,
+    producto,
+    setOrder
+}) => {
+       try{
             const data = {nombre, apellidos, correo, celular, producto};
             let res = await axios.post("http://localhost:5000/encargar", data);
             if(res){ //If the order was sent...
@@ -41,9 +39,24 @@ export const SendMail =  async ({
         catch(err){
             alert(err.response.data.message);
         }
+}
+    export const SendProductDetail = async ({
+        img,
+        producto,
+        descripcion,
+        talla,
+        cantidad,
+        precio,
+        setInfo
+    }) => {
+        try{
+            const info = { img, producto, descripcion, talla, cantidad, precio };
+            let res = await axios.post("http://localhost:5000/comprar", info);
+            if(res){
+                setInfo(res.data);
+            }
+        }
+        catch(err){
+            alert(err.response.data.message);
+        }
     }
-
-//COMING SOON...
-/*
-    Dashboard + user validation
-*/

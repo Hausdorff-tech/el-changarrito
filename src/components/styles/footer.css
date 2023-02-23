@@ -1,0 +1,31 @@
+@media screen and (max-width: 800px){
+    #footer{
+        /*margin-left:20%;*/
+        color:white;
+    }
+    .vl{
+        border-left: 3px solid yellow;
+        border-right: 3px solid yellow;
+        height:80px;        
+    }
+    #txt{
+        margin-top:4.5%;
+        margin-left:28%;
+    }
+}
+
+@media screen and (min-width:810px){
+    #footer{
+        /*margin-left: 40%;*/
+        color:white;
+    }
+    .vl{
+        border-left: 3px solid yellow;
+        border-right: 3px solid yellow;
+        height:80px;        
+    }
+    #txt{
+        margin-top:4.5%;
+        margin-left:28%;
+    }
+}

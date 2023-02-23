@@ -1,0 +1,28 @@
+
+@media screen and (max-width:900px){
+    .deleteBtn{
+        margin-left:35%;       
+    }
+    .productImg{
+        margin-left:36%;
+        width:35%;
+    }
+}
+
+/*@media screen and (max-width:900px){
+    .deleteBtn{
+        margin-left:35%;
+    }    
+}*/
+
+@media screen and (min-width:900px){
+    /*.deleteBtn{
+        margin-left:45%;
+    }*/ 
+    .productImg{
+        display:flex;
+        justify-content: center !important;
+        margin-left:34%;
+        width:35%;
+    }
+}
